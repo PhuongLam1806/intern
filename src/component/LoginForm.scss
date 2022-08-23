@@ -35,40 +35,6 @@
     background: #f9f9f9;
 }
 
-.form__right--img {
-    margin-top: 170px;
-    margin-bottom: 156px;
-    width: 450px;
-    height: 300px;
-}
-
-.form__right--desc {
-    margin: 0;
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 20px;
-    color: #008dff;
-    text-decoration: none;
-}
-
-.btnn {
-    display: inline-block;
-    height: 5px;
-    width: 5px;
-    margin-top: 32px;
-    margin-left: 6px;
-    border-radius: 15px;
-    background: #c4c4c4;
-    cursor: pointer;
-
-    &:hover {
-    }
-
-    &__active {
-        background: #041967;
-    }
-}
-
 .icon {
     position: relative;
     top: 25px;

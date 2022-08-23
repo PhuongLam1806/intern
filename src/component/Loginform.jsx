@@ -4,15 +4,11 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Button } from '@mui/material';
-
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleArrowDown } from '@fortawesome/free-solid-svg-icons';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import './LoginForm.scss';
 import svg from './assets/index';
 import InputField from './Form-control/InputField/InputField';
 import PasswordField from './Form-control/PasswordField/PasswordField';
+import Slider from './Slider/Slider';
 
 LoginForm.propTypes = {
     onSubmit: PropTypes.func,
@@ -78,16 +74,7 @@ function LoginForm(props) {
                         </div>
                     </div>
                     <div className="form__right">
-                        <img className="form__right--img" src={svg.slider1} />
-                        <h3 className="form__right--desc" textDecoration="none">
-                            Schedule & Optimize Delivery
-                        </h3>
-                        <span>Schedule all your deliveries in one platform</span>
-                        <div class="indicator">
-                            <span class="btnn btnn__active"></span>
-                            <span class="btnn"></span>
-                            <span class="btnn"></span>
-                        </div>
+                        <Slider />
                     </div>
                 </div>
             </div>

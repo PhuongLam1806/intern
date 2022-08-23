@@ -59,7 +59,7 @@ function PasswordField(props) {
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton aria-label="toggle password visibility" onClick={toggleShowPassword}>
-                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        {showPassword ? <Visibility /> : <VisibilityOff />}
                                     </IconButton>
                                 </InputAdornment>
                             }
