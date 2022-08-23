@@ -15,18 +15,8 @@
     overflow: hidden;
 }
 .form__left--login {
-    position: relative;
-}
-
-.form__left--email {
-    position: absolute;
-    top: 36px;
-    left: 280px;
-}
-.form__left--password {
-    position: absolute;
-    top: 38%;
-    left: 280px;
+    // position: relative;
+    // display: flex;
 }
 
 .form__link--register,

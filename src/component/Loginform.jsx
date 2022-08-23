@@ -4,14 +4,15 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Button } from '@mui/material';
-import InputField from './Form-control/InputField';
-import PasswordField from './Form-control/PasswordField';
+
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowDown } from '@fortawesome/free-solid-svg-icons';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import './LoginForm.scss';
 import svg from './assets/index';
+import InputField from './Form-control/InputField/InputField';
+import PasswordField from './Form-control/PasswordField/PasswordField';
 
 LoginForm.propTypes = {
     onSubmit: PropTypes.func,
@@ -47,10 +48,9 @@ function LoginForm(props) {
                 <div className="form">
                     <div className="form__left ">
                         <img className="form__left--img" src={svg.logo} />
-                        <form className="form__left--login" onSubmit={form.handleSubmit(handleSubmit)}>
-                            <img className="form__left--email" src={svg.email} />
+                        <form onSubmit={form.handleSubmit(handleSubmit)}>
+                            {/* <img className="form__left--email" src={svg.email} /> */}
                             <InputField name="email" label="Email" form={form} />
-                            <img className="form__left--password" src={svg.password} />
                             <PasswordField name="password" label="Password" form={form} />
 
                             <Button

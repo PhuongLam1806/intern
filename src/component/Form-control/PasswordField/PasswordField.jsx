@@ -12,6 +12,8 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { useState } from 'react';
+import svg from '../../assets/index';
+import './PasswordField.scss';
 
 PasswordField.propTypes = {
     form: PropTypes.object.isRequired,
@@ -40,7 +42,9 @@ function PasswordField(props) {
                 control={form.control}
                 name={name}
                 render={({ field: { onChange, onBlur, value } }) => (
-                    <FormControl error={hasError} variant="standard">
+                    <FormControl className="form-control" error={hasError} variant="standard">
+                        <img className="form__left--password" src={svg.password} />
+                        <img className="form__left--email" src={svg.email} />
                         <InputLabel htmlFor={name}>{label}</InputLabel>
 
                         <Input

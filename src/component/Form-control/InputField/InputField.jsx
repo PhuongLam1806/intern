@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
+import svg from '../../assets/index';
 
 InputField.propTypes = {
     form: PropTypes.object.isRequired,
