@@ -1,0 +1,86 @@
+.form {
+    display: flex;
+    justify-content: center;
+    padding: 70px 58px 70px 0;
+}
+
+.form__left {
+    width: 920px;
+}
+
+.form__left--img {
+    margin-bottom: 100px;
+    width: 312px;
+    height: 170px;
+    overflow: hidden;
+}
+.form__left--login {
+    position: relative;
+}
+
+.form__left--email {
+    position: absolute;
+    top: 36px;
+    left: 280px;
+}
+.form__left--password {
+    position: absolute;
+    top: 38%;
+    left: 280px;
+}
+
+.form__link--register,
+.form__link--forgotpass {
+    font-size: 16px;
+    color: #008dff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form__right {
+    border: 1px solid #efefef;
+    width: 855px;
+    height: 760px;
+    border-radius: 16px;
+    background: #f9f9f9;
+}
+
+.form__right--img {
+    margin-top: 170px;
+    margin-bottom: 156px;
+    width: 450px;
+    height: 300px;
+}
+
+.form__right--desc {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #008dff;
+    text-decoration: none;
+}
+
+.btnn {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    margin-top: 32px;
+    margin-left: 6px;
+    border-radius: 15px;
+    background: #c4c4c4;
+    cursor: pointer;
+
+    &:hover {
+    }
+
+    &__active {
+        background: #041967;
+    }
+}
+
+.icon {
+    position: relative;
+    top: 25px;
+    left: -160px;
+}
