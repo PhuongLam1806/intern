@@ -5,6 +5,7 @@ const svg = {
     email: require('./Email.svg').default,
     password: require('./password.svg').default,
     logo: require('./logo.svg').default,
+    back: require('./Back.svg').default,
 };
 
 export default svg;

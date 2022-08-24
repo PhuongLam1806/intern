@@ -4,28 +4,21 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Button } from '@mui/material';
-import './LoginForm.scss';
-import svg from './assets/index';
-import InputField from './Form-control/InputField/InputField';
-import PasswordField from './Form-control/PasswordField/PasswordField';
-import Slider from './Slider/Slider';
-
-LoginForm.propTypes = {
-    onSubmit: PropTypes.func,
-};
-
-function LoginForm(props) {
+import svg from '../assets/index';
+import InputField from '../Form-control/InputField/InputField';
+import styles from './ForgotPassword.module.scss';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+ForgotPass.propTypes = {};
+function ForgotPass(props) {
     const schema = yup
         .object({
             email: yup.string().required('please enter your email'),
-            password: yup.string().required('please enter your password'),
         })
         .required();
 
     const form = useForm({
         defaultValues: {
             email: '',
-            password: '',
         },
         resolver: yupResolver(schema),
     });
@@ -41,14 +34,25 @@ function LoginForm(props) {
     return (
         <div className="container">
             <div className="row">
-                <div className="form">
-                    <div className="form__left ">
-                        <img className="form__left--img" src={svg.logo} />
-                        <form onSubmit={form.handleSubmit(handleSubmit)}>
-                            {/* <img className="form__left--email" src={svg.email} /> */}
+                <div className={styles.form}>
+                    <div className={styles.form__left}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'flex-start',
+                                marginBottom: 72.5,
+                            }}
+                        >
+                            <img className={styles.form__img} src={svg.logo} />
+                            <a className={styles.backBtn}>
+                                <img src={svg.back} />
+                                BACK
+                            </a>
+                            <h2 className={styles.formTitle}>FORGOT PASSWORD</h2>
+                        </div>
+                        <form className={styles.form__forgot} onSubmit={form.handleSubmit(handleSubmit)}>
                             <InputField name="email" label="Email" form={form} />
-                            <PasswordField name="password" label="Password" form={form} />
-
                             <Button
                                 type="submit"
                                 variant="contained"
@@ -62,19 +66,9 @@ function LoginForm(props) {
                                 }}
                                 size="large"
                             >
-                                Login
+                                RESET PASSWORD
                             </Button>
                         </form>
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <a to="/" className="form__link--register" style={{ marginBottom: 32 }}>
-                                Register
-                            </a>
-                            <a className="form__link--forgotpass">I forgot password</a>
-                            <span style={{ marginTop: 134, fontSize: 16 }}>© 2021 RXdeliverdnow.</span>
-                        </div>
-                    </div>
-                    <div className="form__right">
-                        <Slider />
                     </div>
                 </div>
             </div>
@@ -82,4 +76,4 @@ function LoginForm(props) {
     );
 }
 
-export default LoginForm;
+export default ForgotPass;
